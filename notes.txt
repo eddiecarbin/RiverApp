@@ -1,0 +1,25 @@
+export DISPLAY=:0.0 
+
+loglevel=3 quiet
+
+console=serial0,115200 console=tty1 root=PARTUUID=97709164-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait logo.nologo loglevel=1 quiet splash vt.global_cursor_default=0
+
+https://scribles.net/customizing-boot-up-screen-on-raspberry-pi/
+
+,
+                {
+                    "time": 12,
+                    "actions": [
+                        {
+                            "command": "rivers",
+                            "riverID": [
+                            ]
+                        },
+                        {
+                            "command": "relay",
+                            "relayID": 1,
+                            "state" : 0
+                        }
+                    ]
+                }
+                

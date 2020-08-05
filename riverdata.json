@@ -1,0 +1,740 @@
+{
+    "totalLeds": 1085,
+    "volume": 0.1,
+    "effect": {
+        "count": 5,
+        "fade": 0.8,
+        "speed": 0.03
+    },
+    "scene": [
+        {
+            "name": "StartupState",
+            "movie": "/home/pi/riverapp/videos/GizmoDemo.mp4",
+            "triggers": [
+                {
+                    "time": 2,
+                    "actions": [
+                        {
+                            "command": "relay",
+                            "relayID": 0,
+                            "state":1
+                        },
+                        {
+                            "command": "relay",
+                            "relayID": 1,
+                            "state":1
+                        },
+                        {
+                            "command": "rivers",
+                            "color":"blue",
+                            "riverID": [
+                                "test0"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "time": 4,
+                    "actions": [
+                        {
+                            "command": "rivers",
+                            "color":"yellow",
+                            "riverID": [
+                            ]
+                        },
+                        {
+                            "command": "rivers",
+                            "color":"yellow",
+                            "riverID": [
+                                "test1"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "time": 6,
+                    "actions": [
+                        {
+                            "command": "rivers",
+                            "color":"off",
+                            "riverID": [
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "VitalConectionState",
+            "movie": "/home/pi/riverapp/videos/Button1_V11_wKey FINAL.mp4",
+            "triggers": [
+                {
+                    "time": 2,
+                    "actions": [
+                        {
+                            "command": "relay",
+                            "relayID": 0,
+                            "state":1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "NowAndThenState",
+            "movie": "/home/pi/riverapp/videos/Button2_V5_wKey FINAL.mp4",
+            "triggers": [
+                {
+                    "time": 3,
+                    "actions": [
+                        {
+                            "command": "rivers",
+                            "color":"magenta",
+                            "riverID": [
+                                "current"
+                            ]
+                        },
+                        {
+                            "command": "rivers",
+                            "color":"yellow",
+                            "riverID": [
+                                "historic"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "RiversOfLifeState",
+            "movie": "/home/pi/riverapp/videos/Button3_V5_wKey FINAL.mp4",
+            "triggers": [
+                {
+                    "time": 3,
+                    "actions": [
+                        {
+                            "command": "relay",
+                            "relayID": 1,
+                            "state":1
+                        },
+                        {
+                            "command": "rivers",
+                            "color":"magenta",
+                            "riverID": [
+                                "eel",
+                                "russian"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "WatershedState",
+            "movie": "/home/pi/riverapp/videos/HD-yellow4.mp4",
+            "triggers": [
+                {
+                    "time": 3,
+                    "actions": [
+                        {
+                            "command": "relay",
+                            "relayID": 1,
+                            "state":1
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "systems":{
+        "test0":[
+            "firsthalf"
+        ],
+        "test1":[
+            "secondhalf"
+        ],
+        "russian":[
+            "river24",
+            "river25",
+            "river26",
+            "river27"
+        ],
+        "eel":[
+            "river21",
+            "river22",
+            "river23",
+            "river37",
+            "river38",
+            "river39"
+        ],
+        "current":[
+            "river0a",
+            "river1a",
+            "river2a",
+            "river3a",
+            "river6b",
+            "river11a",
+            "river12",
+            "river13",
+            "river18b",
+            "river19",
+            "river20",
+            "river20",
+            "river29",
+            "river30b",
+            "river31",
+            "river32a",
+            "river40",
+            "river41",
+            "river42",
+            "river43"
+        ],
+        "historic":[
+            "river0b",
+            "river1b",
+            "river2b",
+            "river3b",
+            "river4",
+            "river7",
+            "river5",
+            "river6a",
+            "river8",
+            "river9",
+            "river10",
+            "river11b",
+            "river14",
+            "river15",
+            "river16",
+            "river17",
+            "river18a",
+            "river30a",
+            "river32b",
+            "river33",
+            "river34",
+            "river35",
+            "river44"
+        ]
+    },
+    "allRivers": [
+        {
+            "id": "all",
+            "dir": 1,
+            "led": [
+                0,
+                1085
+            ]
+        },
+        {
+            "id": "firsthalf",
+            "dir": 1,
+            "led": [
+                0,
+                543
+            ]
+        },
+        {
+            "id": "secondhalf",
+            "dir": 1,
+            "led": [
+                543,
+                1085
+            ]
+        },
+        {
+            "id": "river0",
+            "dir": 1,
+            "led": [
+                0,
+                113
+            ]
+        },
+        {
+            "id": "river0a",
+            "dir": 1,
+            "led": [
+                0,
+                100
+            ]
+        },
+        {
+            "id": "river0b",
+            "dir": 1,
+            "led": [
+                100,
+                113
+            ]
+        },
+        {
+            "id": "river1",
+            "dir": -1,
+            "led": [
+                113,
+                139
+            ]
+        },
+        {
+            "id": "river1b",
+            "dir": -1,
+            "led": [
+                113,
+                124
+            ]
+        },
+        {
+            "id": "river1a",
+            "dir": -1,
+            "led": [
+                124,
+                139
+            ]
+        },
+        {
+            "id": "river2",
+            "dir": 1,
+            "led": [
+                139,
+                166
+            ]
+        },
+        {
+            "id": "river2a",
+            "dir": 1,
+            "led": [
+                139,
+                153
+            ]
+        },
+        {
+            "id": "river2b",
+            "dir": 1,
+            "led": [
+                153,
+                166
+            ]
+        },
+        {
+            "id": "river3",
+            "dir": -1,
+            "led": [
+                166,
+                192
+            ]
+        },
+        {
+            "id": "river3a",
+            "dir": -1,
+            "led": [
+                178,
+                192
+            ]
+        },
+        {
+            "id": "river3b",
+            "dir": -1,
+            "led": [
+                166,
+                178
+            ]
+        },
+        {
+            "id": "river4",
+            "dir": 1,
+            "led": [
+                192,
+                207
+            ]
+        },
+        {
+            "id": "river5",
+            "dir": 1,
+            "led": [
+                207,
+                226
+            ]
+        },
+        {
+            "id": "river6",
+            "dir": -1,
+            "led": [
+                226,
+                283
+            ]
+        },
+        {
+            "id": "river6a",
+            "dir": -1,
+            "led": [
+                226,
+                242
+            ]
+        },
+        {
+            "id": "river6b",
+            "dir": -1,
+            "led": [
+                242,
+                283
+            ]
+        },
+        {
+            "id": "river7",
+            "dir": 1,
+            "led": [
+                283,
+                301
+            ]
+        },
+        {
+            "id": "river8",
+            "dir": -1,
+            "led": [
+                301,
+                325
+            ]
+        },
+        {
+            "id": "river9",
+            "dir": 1,
+            "led": [
+                325,
+                337
+            ]
+        },
+        {
+            "id": "river10",
+            "dir": -1,
+            "led": [
+                337,
+                346
+            ]
+        },
+        {
+            "id": "river11",
+            "dir": 1,
+            "led": [
+                346,
+                380
+            ]
+        },
+        {
+            "id": "river11a",
+            "dir": 1,
+            "led": [
+                346,
+                375
+            ]
+        },
+        {
+            "id": "river11b",
+            "dir": 1,
+            "led": [
+                375,
+                380
+            ]
+        },
+        {
+            "id": "river12",
+            "dir": -1,
+            "led": [
+                380,
+                392
+            ]
+        },
+        {
+            "id": "river13",
+            "dir": 1,
+            "led": [
+                392,
+                406
+            ]
+        },
+        {
+            "id": "river14",
+            "dir": -1,
+            "led": [
+                406,
+                417
+            ]
+        },
+        {
+            "id": "river15",
+            "dir": -1,
+            "led": [
+                417,
+                430
+            ]
+        },
+        {
+            "id": "river16",
+            "dir": -1,
+            "led": [
+                430,
+                445
+            ]
+        },
+        {
+            "id": "river17",
+            "dir": 1,
+            "led": [
+                445,
+                457
+            ]
+        },
+        {
+            "id": "river18",
+            "dir": -1,
+            "led": [
+                457,
+                482
+            ]
+        },
+        {
+            "id": "river18a",
+            "dir": -1,
+            "led": [
+                457,
+                471
+            ]
+        },
+        {
+            "id": "river18b",
+            "dir": -1,
+            "led": [
+                471,
+                482
+            ]
+        },
+        {
+            "id": "river19",
+            "dir": 1,
+            "led": [
+                482,
+                491
+            ]
+        },
+        {
+            "id": "river20",
+            "dir": 1,
+            "led": [
+                491,
+                500
+            ]
+        },
+        {
+            "id": "river21",
+            "dir": -1,
+            "led": [
+                500,
+                516
+            ]
+        },
+        {
+            "id": "river22",
+            "dir": 1,
+            "led": [
+                516,
+                536
+            ]
+        },
+        {
+            "id": "river23",
+            "dir": 1,
+            "led": [
+                536,
+                580
+            ]
+        },
+        {
+            "id": "river24",
+            "dir": -1,
+            "led": [
+                580,
+                612
+            ]
+        },
+        {
+            "id": "river25",
+            "dir": 1,
+            "led": [
+                612,
+                618
+            ]
+        },
+        {
+            "id": "river26",
+            "dir": -1,
+            "led": [
+                618,
+                622
+            ]
+        },
+        {
+            "id": "river27",
+            "dir": 1,
+            "led": [
+                622,
+                630
+            ]
+        },
+        {
+            "id": "river28",
+            "dir": 1,
+            "led": [
+                630,
+                648
+            ]
+        },
+        {
+            "id": "river29",
+            "dir": 1,
+            "led": [
+                648,
+                665
+            ]
+        },
+        {
+            "id": "river30",
+            "dir": 1,
+            "led": [
+                665,
+                682
+            ]
+        },
+        {
+            "id": "river30a",
+            "dir": 1,
+            "led": [
+                665,
+                671
+            ]
+        },
+        {
+            "id": "river30b",
+            "dir": 1,
+            "led": [
+                671,
+                682
+            ]
+        },
+        {
+            "id": "river31",
+            "dir": 1,
+            "led": [
+                682,
+                702
+            ]
+        },
+        {
+            "id": "river32",
+            "dir": 1,
+            "led": [
+                702,
+                717
+            ]
+        },
+        {
+            "id": "river32a",
+            "dir": 1,
+            "led": [
+                702,
+                713
+            ]
+        },
+        {
+            "id": "river32b",
+            "dir": 1,
+            "led": [
+                713,
+                717
+            ]
+        },
+        {
+            "id": "river33",
+            "dir": 1,
+            "led": [
+                717,
+                726
+            ]
+        },
+        {
+            "id": "river34",
+            "dir": 1,
+            "led": [
+                726,
+                736
+            ]
+        },
+        {
+            "id": "river35",
+            "dir": 1,
+            "led": [
+                736,
+                751
+            ]
+        },
+        {
+            "id": "river37",
+            "dir": 1,
+            "led": [
+                751,
+                786
+            ]
+        },
+        {
+            "id": "river38",
+            "dir": 1,
+            "led": [
+                786,
+                794
+            ]
+        },
+        {
+            "id": "river39",
+            "dir": 1,
+            "led": [
+                794,
+                801
+            ]
+        },
+        {
+            "id": "river40",
+            "dir": 1,
+            "led": [
+                801,
+                904
+            ]
+        },
+        {
+            "id": "river41",
+            "dir": 1,
+            "led": [
+                904,
+                918
+            ]
+        },
+        {
+            "id": "river42",
+            "dir": 1,
+            "led": [
+                918,
+                930
+            ]
+        },
+        {
+            "id": "river43",
+            "dir": 1,
+            "led": [
+                930,
+                1056
+            ]
+        },
+        {
+            "id": "river44",
+            "dir": 1,
+            "led": [
+                1056,
+                1085
+            ]
+        }
+    ]
+}
